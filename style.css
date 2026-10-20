@@ -67,7 +67,7 @@ main { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
 .imagem-destaque { display: block; width: 100%; max-height: 420px; object-fit: cover; border-radius: 18px; box-shadow: 0 18px 45px #183d2726; }
 .botao { display: inline-block; margin-top: 12px; margin-right: 12px; padding: 11px 18px; border-radius: 8px; background: var(--verde); color: white; font-weight: 700; text-decoration: none; }
 .botao:hover, .botao:focus-visible { background: var(--verde-escuro); }
-.modos, .dimensoes, .sugestoes { padding: 64px 0 88px; border-top: 1px solid #d9d3c6; }
+.modos, .dimensoes, .funcionalidades, .sugestoes { padding: 64px 0 88px; border-top: 1px solid #d9d3c6; }
 .cabecalho-secao { margin-bottom: 28px; text-align: center; }
 .cabecalho-secao h2 { margin: 0; color: var(--verde-escuro); font-size: clamp(1.8rem, 4vw, 2.7rem); line-height: 1.2; }
 .cabecalho-secao > p:last-child { margin: 10px 0 0; }
@@ -78,6 +78,69 @@ main { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
 .conteudo-cartao { padding: 20px; }
 .conteudo-cartao h3 { margin: 0 0 8px; color: var(--verde); font-size: 1.3rem; }
 .conteudo-cartao p { margin: 0; }
+.calculadoras-coordenadas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+.calculadora-coordenadas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 24px;
+    border: 1px solid #e5dfd2;
+    border-radius: 14px;
+    background: var(--superficie);
+    box-shadow: 0 8px 24px #183d2710;
+}
+.calculadora-coordenadas h3 { margin: 0 0 6px; color: var(--verde-escuro); }
+.calculadora-coordenadas label { font-weight: 700; }
+.calculadora-coordenadas input {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    border: 1px solid #b9c2b8;
+    border-radius: 8px;
+    font: inherit;
+}
+.calculadora-coordenadas input:focus-visible,
+.botao-calcular:focus-visible { outline: 3px solid #78a9e8; outline-offset: 2px; }
+.botao-calcular {
+    min-height: 44px;
+    margin-top: 8px;
+    padding: 10px 16px;
+    border: 0;
+    border-radius: 8px;
+    background: var(--verde);
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+.botao-calcular:hover { background: var(--verde-escuro); }
+.resultado-coordenadas {
+    min-height: 1.65em;
+    margin: 4px 0 0;
+    color: var(--verde-escuro);
+    font-weight: 700;
+}
+.sorteador-desafio {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 24px;
+    margin-top: 22px;
+    padding: 26px;
+    border: 1px solid #d6c5eb;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #fffdf8, #eee5fb);
+    box-shadow: 0 8px 24px #183d2710;
+}
+.sorteador-desafio .sobretitulo { margin-bottom: 6px; }
+.sorteador-desafio h3 { margin: 0 0 8px; color: var(--verde-escuro); font-size: 1.4rem; }
+.missao-desafio { margin: 0; font-size: 1.05rem; }
+.dificuldade-desafio { margin: 10px 0 0; color: #56336f; font-weight: 800; }
+.sorteador-desafio .botao-calcular { margin: 0; }
 .sugestao {
     padding: 24px 20px;
     background: linear-gradient(180deg, var(--superficie) 0%, var(--verde-claro) 100%);
@@ -150,12 +213,168 @@ footer p { margin: 0; }
 @media (max-width: 760px) {
     .apresentacao { grid-template-columns: 1fr; }
     .imagem-destaque { max-height: 340px; }
-    .grade-modos, .grade-dimensoes, .grade-sugestoes { grid-template-columns: 1fr; }
+    .grade-modos, .grade-dimensoes, .grade-sugestoes, .calculadoras-coordenadas { grid-template-columns: 1fr; }
     .cartao img { height: 240px; }
     .menu { justify-content: center; }
+    .sorteador-desafio { grid-template-columns: 1fr; }
 }
 @media (max-width: 440px) {
     .topo { align-items: flex-start; flex-direction: column; justify-content: center; padding-top: 14px; padding-bottom: 14px; }
     .menu { gap: 10px 16px; }
     .menu a { padding-inline: 8px; }
 }
+
+.cartao-dimensao:first-child {
+    background: #d9efff;
+}
+
+.cartao-nether {
+    background: #f07818;
+    color: #111;
+}
+
+.cartao-nether h3 {
+    color: #111;
+}
+
+.cartao-end h3 {
+    color: #fff;
+}
+
+.cartao-end {
+    background: linear-gradient(145deg, #090712 0%, #211334 52%, #101b35 100%);
+    color: #fff;
+    border-color: #39264f;
+    box-shadow: 0 8px 24px #12091f40;
+}
+
+.marca-link { color: #fff; text-decoration: none; }
+.pagina-wiki { padding-bottom: 72px; }
+.wiki-apresentacao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    margin: 48px 0 28px;
+    padding: clamp(28px, 6vw, 64px);
+    overflow: hidden;
+    border: 1px solid #cddbbd;
+    border-radius: 18px;
+    background: linear-gradient(125deg, #e4f0d5, #f9f4e9 68%, #d8e9c5);
+}
+.wiki-apresentacao h1 { margin: 0 0 12px; color: var(--verde-escuro); font-size: clamp(2.2rem, 6vw, 4rem); line-height: 1.08; }
+.wiki-apresentacao p:last-child { max-width: 620px; margin: 0; font-size: 1.1rem; }
+.wiki-pixel {
+    display: grid;
+    flex: 0 0 130px;
+    width: 130px;
+    height: 130px;
+    place-items: center;
+    border: 8px solid #285c35;
+    border-radius: 18px;
+    background: #a8d17b;
+    box-shadow: inset -12px -12px 0 #75a94f, 0 14px 30px #183d2726;
+    font-size: 4rem;
+    transform: rotate(5deg);
+}
+.wiki-conteudo { padding: 48px 0 64px; border-top: 1px solid #d9d3c6; }
+.wiki-busca-label { display: block; max-width: 680px; margin: 0 auto 8px; font-weight: 800; color: var(--verde-escuro); }
+.wiki-busca {
+    display: block;
+    width: min(680px, 100%);
+    min-height: 52px;
+    margin: 0 auto;
+    padding: 12px 16px;
+    border: 2px solid #9caf8d;
+    border-radius: 10px;
+    background: var(--superficie);
+    color: var(--texto);
+    font: inherit;
+}
+.wiki-busca:focus-visible { outline: 3px solid #78a9e8; outline-offset: 2px; }
+.wiki-contagem { margin: 10px 0 20px; text-align: center; color: #526050; font-size: .95rem; }
+.wiki-grade { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.wiki-verbete {
+    min-width: 0;
+    padding: 22px;
+    border: 1px solid #e5dfd2;
+    border-top: 5px solid var(--verde);
+    border-radius: 14px;
+    background: var(--superficie);
+    box-shadow: 0 8px 24px #183d2710;
+}
+.wiki-verbete[hidden] { display: none; }
+.wiki-icone { display: inline-flex; width: 48px; height: 48px; align-items: center; justify-content: center; border-radius: 12px; background: var(--verde-claro); font-size: 1.7rem; }
+.wiki-categoria { margin: 14px 0 4px; color: var(--verde); font-size: .78rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.wiki-verbete h3 { margin: 0 0 8px; color: var(--verde-escuro); font-size: 1.3rem; }
+.wiki-verbete > p:last-child { margin: 0; }
+.wiki-sem-resultados { padding: 28px; border: 1px dashed #a8b59d; border-radius: 12px; text-align: center; }
+.wiki-nota { padding: 28px; border-radius: 14px; background: #e9efdf; }
+.wiki-nota h2 { margin: 0 0 8px; color: var(--verde-escuro); }
+.wiki-nota p { margin: 0; }
+.wiki-nota .botao { margin-top: 18px; }
+.navegacao-paginas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 36px 0;
+}
+.navegacao-paginas > .sobretitulo,
+.navegacao-paginas > h2 { flex-basis: 100%; margin: 0; text-align: center; }
+.navegacao-paginas > h2 { margin-bottom: 8px; color: var(--verde-escuro); }
+.links-paginas {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    width: 100%;
+}
+.cartao-link-pagina {
+    display: flex;
+    min-height: 145px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    padding: 20px;
+    border: 1px solid #d8dfcf;
+    border-radius: 14px;
+    background: var(--superficie);
+    box-shadow: 0 8px 24px #183d2710;
+    color: var(--verde-escuro);
+    text-decoration: none;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+.cartao-link-pagina:hover, .cartao-link-pagina:focus-visible {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px #183d2720;
+}
+.cartao-link-pagina:focus-visible, .botao-pagina:focus-visible { outline: 3px solid #78a9e8; outline-offset: 3px; }
+.cartao-link-pagina span { font-size: 1.6rem; }
+.cartao-link-pagina strong { font-size: 1.1rem; }
+.cartao-link-pagina small { color: #526050; font-size: .9rem; }
+.botao-pagina {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 18px;
+    border-radius: 8px;
+    background: var(--verde);
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+}
+.botao-pagina:hover { background: var(--verde-escuro); }
+
+@media (max-width: 900px) {
+    .wiki-grade { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .links-paginas { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+    .wiki-apresentacao { align-items: flex-start; margin-top: 28px; }
+    .wiki-pixel { flex-basis: 76px; width: 76px; height: 76px; border-width: 5px; border-radius: 12px; font-size: 2.4rem; }
+    .wiki-grade { grid-template-columns: 1fr; }
+    .cartao-link-pagina { min-height: 110px; }
+}
+
