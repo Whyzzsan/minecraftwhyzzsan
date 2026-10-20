@@ -146,7 +146,18 @@ main { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
 .sorteador-desafio .sobretitulo { margin-bottom: 6px; }
 .sorteador-desafio h3 { margin: 0 0 8px; color: var(--verde-escuro); font-size: 1.4rem; }
 .missao-desafio { margin: 0; font-size: 1.05rem; }
-.dificuldade-desafio { margin: 10px 0 0; color: #56336f; font-weight: 800; }
+.dificuldade-desafio {
+    display: inline-block;
+    margin: 10px 0 0;
+    padding: 5px 12px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    font-weight: 800;
+}
+.dificuldade-facil { background: #d9efdc; border-color: #91c49a; color: #205d2c; }
+.dificuldade-media { background: #fff0b3; border-color: #e2c451; color: #6d5100; }
+.dificuldade-dificil { background: #f8d5d5; border-color: #db8888; color: #921f1f; }
+.dificuldade-extremamente-dificil { background: #64121a; border-color: #430b11; color: #fff; }
 .sorteador-desafio .botao-calcular { margin: 0; }
 .sugestao {
     padding: 24px 20px;

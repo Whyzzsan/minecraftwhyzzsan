@@ -112,7 +112,24 @@
             { missao: 'Derrote o Ender Dragon e o Wither na mesma sessão, sem morrer.', dificuldade: 'Extremamente difícil' },
             { missao: 'Sobreviva a 100 dias no modo Hardcore e construa uma base segura.', dificuldade: 'Extremamente difícil' },
             { missao: 'Explore o End, encontre uma cidade e volte ao portal com élitros.', dificuldade: 'Extremamente difícil' },
-            { missao: 'Complete uma raid em uma vila sem deixar nenhum aldeão morrer.', dificuldade: 'Extremamente difícil' }
+            { missao: 'Complete uma raid em uma vila sem deixar nenhum aldeão morrer.', dificuldade: 'Extremamente difícil' },
+            { missao: 'Construa um cercado e reúna duas espécies de animais.', dificuldade: 'Fácil' },
+            { missao: 'Decore sua entrada com placas, lanternas e um caminho de blocos.', dificuldade: 'Fácil' },
+            { missao: 'Encontre um naufrágio e traga de volta um item encontrado nele.', dificuldade: 'Fácil' },
+            { missao: 'Prepare uma refeição usando uma colheita feita por você.', dificuldade: 'Fácil' },
+            { missao: 'Faça um mapa da região e marque nele sua base e uma vila.', dificuldade: 'Média' },
+            { missao: 'Construa um farol costeiro que possa ser visto do mar.', dificuldade: 'Média' },
+            { missao: 'Encontre uma fortaleza do Nether e volte com uma vara de Blaze.', dificuldade: 'Média' },
+            { missao: 'Crie uma sala de armazenamento com baús separados por categoria.', dificuldade: 'Média' },
+            { missao: 'Encontre um bastião no Nether e saia de lá com um tesouro.', dificuldade: 'Difícil' },
+            { missao: 'Construa três fazendas diferentes e organize os itens coletados.', dificuldade: 'Difícil' },
+            { missao: 'Explore uma cidade antiga e recupere um item sem despertar o Warden.', dificuldade: 'Difícil' },
+            { missao: 'Derrote os guardiões anciões de um monumento oceânico.', dificuldade: 'Difícil' },
+            { missao: 'Derrote o Ender Dragon sem usar armadura e sobreviva para voltar ao portal.', dificuldade: 'Extremamente difícil' },
+            { missao: 'Consiga uma estrela do Nether e use-a para construir um farol.', dificuldade: 'Extremamente difícil' },
+            { missao: 'Complete uma raid no modo Difícil sem perder nenhum aldeão.', dificuldade: 'Extremamente difícil' },
+            { missao: 'Encontre um bastião, uma fortaleza e uma cidade antiga na mesma expedição e volte vivo.', dificuldade: 'Extremamente difícil' },
+            { missao: 'Construa uma base no Nether com armazenamento e fazenda de fungos sem voltar ao Mundo Superior até terminá-la.', dificuldade: 'Extremamente difícil' }
         ];
         let ultimoDesafio = -1;
 
@@ -125,7 +142,15 @@
             ultimoDesafio = indice;
             const desafio = desafios[indice];
             document.querySelector('#missao-desafio').textContent = desafio.missao;
-            document.querySelector('#dificuldade-desafio').textContent = `Dificuldade: ${desafio.dificuldade}`;
+            const seloDificuldade = document.querySelector('#dificuldade-desafio');
+            const classesDificuldade = {
+                'Fácil': 'facil',
+                'Média': 'media',
+                'Difícil': 'dificil',
+                'Extremamente difícil': 'extremamente-dificil'
+            };
+            seloDificuldade.className = `dificuldade-desafio dificuldade-${classesDificuldade[desafio.dificuldade]}`;
+            seloDificuldade.textContent = `Dificuldade: ${desafio.dificuldade}`;
             document.querySelector('#sortear-desafio').textContent = 'Sortear novamente';
         });
     </script>
