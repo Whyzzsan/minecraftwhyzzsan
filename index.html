@@ -10,7 +10,8 @@
 <body>
     <header class="topo">
         <p class="marca">MINECRAFT</p>
-        <nav class="menu" aria-label="Navegação principal">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navegacao-principal"><span>Menu</span><span class="menu-toggle-icone" aria-hidden="true">☰</span></button>
+        <nav class="menu" id="navegacao-principal" aria-label="Navegação principal">
             <a href="#sobre">Início</a>
             <a href="#modos">Modos</a>
             <a href="#dimensoes">Dimensões</a>
@@ -25,14 +26,22 @@
     <main>
         <section class="apresentacao" id="sobre">
             <div class="texto-apresentacao">
-                <p class="sobretitulo">Explore, construa, imagine</p>
+                <p class="sobretitulo">Um convite para explorar</p>
                 <h1>Um mundo feito de possibilidades</h1>
-                <p>Minecraft é um jogo de aventura, construção e sobrevivência. Em um mundo aberto formado por blocos, você coleta recursos, constrói estruturas e descobre novos lugares no seu próprio ritmo.</p>
-                <p>Crie casas, castelos, cidades e máquinas, explore cavernas e enfrente criaturas — até mesmo o temível Ender Dragon.</p>
-                <a class="botao" href="#modos">Conheça os modos</a>
-                <a class="botao" href="#dimensoes">Conheça dimensões</a>
+                <p class="hero-resumo">Minecraft é um jogo de aventura, construção e sobrevivência. Em um mundo aberto formado por blocos, você coleta recursos, constrói estruturas e descobre novos lugares no seu próprio ritmo.</p>
+                <p class="hero-detalhe">Crie casas, castelos, cidades e máquinas; explore cavernas e enfrente criaturas — até mesmo o temível Ender Dragon.</p>
+                <div class="hero-acoes">
+                    <a class="botao" href="#modos">Conheça os modos</a>
+                    <a class="botao botao-secundario" href="#dimensoes">Explore dimensões</a>
+                </div>
+                <p class="hero-nota"><span aria-hidden="true">✦</span> Sua próxima aventura começa aqui</p>
             </div>
-            <img class="imagem-destaque" src="2013-08-08-minecraft-pc-10-curiosidades.jpg" alt="Paisagem e personagens do universo Minecraft">
+            <figure class="hero-ilustracao">
+                <span class="hero-brilho hero-brilho-um" aria-hidden="true">✧</span>
+                <span class="hero-brilho hero-brilho-dois" aria-hidden="true">✦</span>
+                <img class="imagem-destaque" src="cloud-anime.gif" alt="Animação de um céu azul com nuvens brancas">
+                <figcaption>Um céu de nuvens para acompanhar sua aventura</figcaption>
+            </figure>
         </section>
 
         <section class="modos" id="modos">
@@ -64,7 +73,7 @@
                     </div>
                 </article>
                 <article class="cartao">
-                    <img src="image2.webp" alt="morte no modo hardcore">
+                    <img src="image2.webp" alt="Morte no modo Hardcore">
                     <div class="conteudo-cartao">
                         <h3>Hardcore</h3>
                         <p>O modo Hardcore do Minecraft é um modo de jogo em que você tem apenas uma vida e a dificuldade fica sempre no Difícil. Se morrer, você não poderá continuar jogando normalmente naquele mundo, apenas assistindo no modo espectador. Por isso, é preciso ter muito cuidado, conseguir bons equipamentos e sobreviver aos monstros e aos perigos do jogo.</p>
@@ -166,3 +175,7 @@
     <script src="javascript.js" defer></script>
 </body>
 </html>
+
+
+
+

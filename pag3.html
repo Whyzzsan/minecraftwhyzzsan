@@ -4,33 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Conheça biomas e dicas de exploração para Minecraft.">
-    <title>Página 3 | Biomas de Minecraft</title>
+    <title>Biomas | Minecraft</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="topo">
         <a class="marca marca-link" href="index.html">MINECRAFT</a>
-        <nav class="menu" aria-label="Navegação principal">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navegacao-principal"><span>Menu</span><span class="menu-toggle-icone" aria-hidden="true">☰</span></button>
+        <nav class="menu" id="navegacao-principal" aria-label="Navegação principal">
             <a href="index.html">Início</a><a href="pag2.html">Funcionalidades</a><a href="pag3.html" aria-current="page">Biomas</a><a href="pag4.html">Construção</a>
         </nav>
     </header>
-    <main class="pagina-wiki">
+    <main class="pagina-wiki pagina-biomas">
         <section class="wiki-apresentacao">
             <div><p class="sobretitulo">Página 3 · Exploração</p><h1>Biomas e lugares</h1><p>Cada região muda a paisagem, os recursos e os desafios da sua jornada. Prepare o equipamento e escolha para onde ir.</p></div>
             <div class="wiki-pixel" aria-hidden="true">🌍</div>
         </section>
-        <section class="wiki-conteudo">
-            <div class="cabecalho-secao"><p class="sobretitulo">Escolha seu destino</p><h2>Regiões para explorar</h2><p>Alguns lugares para encontrar recursos, construir uma base ou começar uma expedição.</p></div>
-            <div class="wiki-grade">
-                <article class="wiki-verbete"><span class="wiki-icone" aria-hidden="true">🌲</span><p class="wiki-categoria">Floresta</p><h3>Floresta</h3><p>Uma boa região para conseguir madeira e encontrar animais. Marque o caminho de volta para não se perder entre as árvores.</p></article>
-                <article class="wiki-verbete"><span class="wiki-icone" aria-hidden="true">🏜️</span><p class="wiki-categoria">Região seca</p><h3>Deserto</h3><p>Terreno aberto com areia e cactos. Explore com atenção em busca de estruturas e leve comida, pois há pouca madeira por perto.</p></article>
-                <article class="wiki-verbete"><span class="wiki-icone" aria-hidden="true">❄️</span><p class="wiki-categoria">Região fria</p><h3>Taiga nevada</h3><p>Florestas de clima frio cobertas de neve. Árvores e animais ajudam a montar um abrigo, mas cuidado com a visibilidade reduzida durante nevascas.</p></article>
-                <article class="wiki-verbete"><span class="wiki-icone" aria-hidden="true">🍄</span><p class="wiki-categoria">Ilha rara</p><h3>Campos de cogumelos</h3><p>Uma paisagem incomum, marcada por micélio e coguvacas. Pode ser um lugar interessante para uma base isolada.</p></article>
-                <article class="wiki-verbete"><span class="wiki-icone" aria-hidden="true">🌊</span><p class="wiki-categoria">Oceano</p><h3>Oceano profundo</h3><p>Explore ruínas e estruturas submersas com equipamento apropriado. Poções, portas e um caminho de retorno facilitam a expedição.</p></article>
-                <article class="wiki-verbete"><span class="wiki-icone" aria-hidden="true">🪨</span><p class="wiki-categoria">Subsolo</p><h3>Cavernas exuberantes</h3><p>Cavernas com vegetação, água e argila. Ilumine os corredores e observe o teto para evitar quedas e encontros inesperados.</p></article>
+        <section class="wiki-conteudo biomas-conteudo">
+            <div class="cabecalho-secao">
+                <p class="sobretitulo">Um atlas para sua jornada</p>
+                <h2>Doze paisagens, doze maneiras de jogar</h2>
+                <p>Compare clima, recursos e desafios para escolher onde construir sua próxima base.</p>
+            </div>
+            <div class="wiki-grade biomas-grade">
+                <article class="wiki-verbete bioma-card"><span class="wiki-icone" aria-hidden="true">🌳</span><p class="wiki-categoria">Madeira e abrigo</p><h3>Floresta</h3><p>Árvores comuns e animais fazem deste bioma um começo versátil. Rios e clareiras oferecem bons caminhos para uma base.</p><div class="bioma-tracos"><span><b>Encontre:</b> madeira, animais e cogumelos.</span><span><b>Observe:</b> marque referências para não se perder entre as árvores.</span></div></article>
+                <article class="wiki-verbete bioma-card"><span class="wiki-icone" aria-hidden="true">🌾</span><p class="wiki-categoria">Espaço para construir</p><h3>Planícies</h3><p>Terreno aberto facilita a construção e a visibilidade. É comum encontrar cavalos e vilas para iniciar trocas.</p><div class="bioma-tracos"><span><b>Encontre:</b> vilas, cavalos e espaço plano.</span><span><b>Observe:</b> ilumine o perímetro da base durante a noite.</span></div></article>
+                <article class="wiki-verbete bioma-card"><span class="wiki-icone" aria-hidden="true">🌲</span><p class="wiki-categoria">Madeira de pinheiro</p><h3>Taiga nevada</h3><p>Pinheiros cobertos de neve, raposas e lobos compõem uma paisagem fria. A madeira escura combina com cabanas e torres de vigia.</p><div class="bioma-tracos"><span><b>Encontre:</b> abetos, neve e vida selvagem.</span><span><b>Observe:</b> leve comida e cuidado com a neve fofa.</span></div></article>
+                <article class="wiki-verbete bioma-card"><span class="wiki-icone" aria-hidden="true">🌸</span><p class="wiki-categoria">Bosque florido</p><h3>Jardim de cerejeiras</h3><p>Árvores rosadas e pétalas no chão criam um cenário sereno para construções claras. Abelhas podem aparecer entre as flores.</p><div class="bioma-tracos"><span><b>Encontre:</b> madeira de cerejeira e pétalas.</span><span><b>Observe:</b> preserve as árvores ao abrir espaço para construir.</span></div></article>
+                <article class="wiki-verbete bioma-card"><span class="wiki-icone" aria-hidden="true">🏜️</span><p class="wiki-categoria">Exploração e estruturas</p><h3>Deserto</h3><p>Um horizonte aberto, com cactos e pouca madeira. Templos e vilas podem guardar recursos, mas exigem atenção a armadilhas e criaturas.</p><div class="bioma-tracos"><span><b>Encontre:</b> areia, cactos e templos.</span><span><b>Observe:</b> leve madeira e comida antes de se afastar.</span></div></article>
+                <article class="wiki-verbete bioma-card"><span class="wiki-icone" aria-hidden="true">🌴</span><p class="wiki-categoria">Vegetação densa</p><h3>Selva</h3><p>Copas altas, cipós e vegetação fechada escondem templos e recursos. A verticalidade torna cada percurso uma pequena expedição.</p><div class="bioma-tracos"><span><b>Encontre:</b> bambu, melões e madeira tropical.</span><span><b>Observe:</b> use marcos visíveis para traçar o caminho de volta.</span></div></article>
+                <article class="wiki-verbete bioma-card"><span class="wiki-icone" aria-hidden="true">🐸</span><p class="wiki-categoria">Água e madeira</p><h3>Pântano de mangue</h3><p>Raízes sobre a água, lama e sapos definem este bioma. Canais estreitos tornam barcos úteis para circular e transportar materiais.</p><div class="bioma-tracos"><span><b>Encontre:</b> madeira de mangue, lama e sapos.</span><span><b>Observe:</b> planeje passarelas para atravessar as raízes.</span></div></article>
+                <article class="wiki-verbete bioma-card"><span class="wiki-icone" aria-hidden="true">🍄</span><p class="wiki-categoria">Bioma raro</p><h3>Campos de cogumelos</h3><p>Ilhas isoladas cobertas de micélio e habitadas por coguvacas. É uma opção tranquila para uma base distante dos perigos comuns da superfície.</p><div class="bioma-tracos"><span><b>Encontre:</b> micélio e coguvacas.</span><span><b>Observe:</b> leve mudas e recursos básicos; há poucas árvores.</span></div></article>
+                <article class="wiki-verbete bioma-card"><span class="wiki-icone" aria-hidden="true">🌊</span><p class="wiki-categoria">Expedição submersa</p><h3>Oceano profundo</h3><p>Ruínas, naufrágios e monumentos oceânicos recompensam quem se prepara para mergulhar. A profundidade reduz a luz e dificulta a orientação.</p><div class="bioma-tracos"><span><b>Encontre:</b> estruturas, tesouros e vida marinha.</span><span><b>Observe:</b> leve equipamento de respiração e marque o ponto de retorno.</span></div></article>
+                <article class="wiki-verbete bioma-card"><span class="wiki-icone" aria-hidden="true">🏜</span><p class="wiki-categoria">Pedra e minérios</p><h3>Terras áridas</h3><p>Camadas de terracota formam paredões coloridos e cânions. Minas abandonadas podem surgir expostas nas encostas.</p><div class="bioma-tracos"><span><b>Encontre:</b> terracota, ouro e minas.</span><span><b>Observe:</b> estoque madeira e água antes de explorar a região.</span></div></article>
+                <article class="wiki-verbete bioma-card"><span class="wiki-icone" aria-hidden="true">🏔️</span><p class="wiki-categoria">Altura e frio</p><h3>Picos nevados</h3><p>Montanhas altas oferecem vistas amplas e acesso a minérios, mas as subidas e a neve fofa tornam a travessia arriscada.</p><div class="bioma-tracos"><span><b>Encontre:</b> cabras, ferro e esmeraldas.</span><span><b>Observe:</b> carregue blocos para marcar e proteger o caminho.</span></div></article>
+                <article class="wiki-verbete bioma-card"><span class="wiki-icone" aria-hidden="true">✨</span><p class="wiki-categoria">Descoberta subterrânea</p><h3>Cavernas exuberantes</h3><p>Musgo, argila, água e frutas luminosas criam cavernas cheias de cor. Bolsões de aquífero e desníveis podem surpreender exploradores.</p><div class="bioma-tracos"><span><b>Encontre:</b> frutas luminosas, argila e axolotes.</span><span><b>Observe:</b> ilumine as passagens e mantenha uma rota de saída.</span></div></article>
             </div>
         </section>
-        <section class="wiki-nota"><h2>Dica de exploração</h2><p>Leve comida, ferramentas extras, tochas e blocos fáceis de reconhecer. Anote as coordenadas da base e dos lugares importantes.</p></section>
+        <section class="wiki-nota bioma-itinerario">
+            <div class="bioma-itinerario-intro"><p class="sobretitulo">Antes de partir</p><h2>Prepare sua rota pelo céu e pela terra</h2><p>Uma expedição tranquila começa com referências simples e equipamento adequado.</p></div>
+            <div class="bioma-passos">
+                <article><span>01</span><h3>Marque o caminho</h3><p>Anote as coordenadas da base e use blocos ou tochas como sinais de retorno.</p></article>
+                <article><span>02</span><h3>Leve o essencial</h3><p>Inclua comida, ferramentas extras, luzes e blocos para atravessar terrenos difíceis.</p></article>
+                <article><span>03</span><h3>Escolha um objetivo</h3><p>Procure uma estrutura, reúna um recurso específico ou encontre um local para construir.</p></article>
+            </div>
+        </section>
         <nav class="navegacao-paginas" aria-label="Navegar entre páginas"><a class="botao-pagina" href="pag2.html">← Funcionalidades</a><a class="botao-pagina" href="index.html">Início</a><a class="botao-pagina" href="pag4.html">Próxima: Construção →</a></nav>
     </main>
     <footer><div class="contato-footer"><p>Feito por um fã de Minecraft.</p><a class="discord-botao" href="https://discord.com/users/926858681625231401" target="_blank" rel="noopener noreferrer"><span class="discord-icone" aria-hidden="true">💬</span>Entre no Discord</a></div></footer>
